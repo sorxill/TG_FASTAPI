@@ -8,7 +8,7 @@ from aiogram.filters import CommandStart
 from aiogram.types import Message
 from aiogram.utils.markdown import hbold
 
-from config import config as cfg
+from TG_BOT.config_BOT import config as cfg
 
 dp = Dispatcher()
 
