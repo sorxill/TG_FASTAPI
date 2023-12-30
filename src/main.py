@@ -1,4 +1,4 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, Request
 
 from insults.insult import router as router_insult
 from quotes.quote import router as router_quote
@@ -16,3 +16,9 @@ def helo_world():
     return {
         "answer": "Hello World!",
     }
+
+
+@app.post("/hook")
+async def handle_webhook(request: Request):
+    data = await request.json()
+    return data
