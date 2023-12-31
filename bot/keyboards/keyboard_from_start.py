@@ -1,18 +1,18 @@
-from aiogram import types
 from aiogram.utils.keyboard import ReplyKeyboardBuilder
 
+from bot.keyboards.keyboard_buttons.keyboard_button import KeyButton
+
 keyboard_for_start = ReplyKeyboardBuilder()
+
 keyboard_for_start.row(
-    types.KeyboardButton(text="Регистрация"),
-    types.KeyboardButton(text="Профиль"),
+    KeyButton.register,
+    KeyButton.profile,
 )
 
 keyboard_for_start.row(
-    types.KeyboardButton(
-        text="Начать игру", request_poll=types.KeyboardButtonPollType(type="start_quiz")
-    ),
+    KeyButton.quiz_game,
 )
 
 keyboard_for_start.row(
-    types.KeyboardButton(text="Связь с разработчиком"),
+    KeyButton.contacts_with_dev,
 )
