@@ -9,11 +9,10 @@ from routers.start_router.start import start_router
 bot = Bot(token=settings.bot_token.get_secret_value(), parse_mode="HTML")
 dp = Dispatcher()
 dp.include_router(start_router)
-url_web = settings.url_web.get_secret_value()
 
 
 async def on_startup():
-    await bot.set_webhook(url=url_web)
+    await bot.set_webhook(url=settings.url_web.get_secret_value())
 
 
 async def on_shutdown():
