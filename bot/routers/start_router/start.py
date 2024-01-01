@@ -2,7 +2,7 @@ from aiogram import Router, types
 from aiogram.filters import CommandStart
 from aiogram.utils.formatting import Text, Bold
 
-from bot.keyboards.keyboard_from_start import keyboard_for_start
+from bot.keyboards.all_keyboards.keyboard_from_start import keyboard_for_start
 
 start_router = Router()
 
