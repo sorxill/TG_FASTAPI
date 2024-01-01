@@ -38,7 +38,7 @@ statistics = Table(
         default=0,
     ),
     Column(
-        "matches",
+        "good_word",
         Integer,
         nullable=False,
     ),
